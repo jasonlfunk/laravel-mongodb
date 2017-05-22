@@ -330,8 +330,8 @@ class RelationsTest extends TestCase
         $group = Group::find($group->_id);
 
         // Check for custom relation attributes
-        $this->assertTrue(array_key_exists('users', $group->getAttributes()));
-        $this->assertTrue(array_key_exists('groups', $user->getAttributes()));
+        $this->assertTrue(array_key_exists('_users', $group->getAttributes()));
+        $this->assertTrue(array_key_exists('_groups', $user->getAttributes()));
 
         // Assert they are attached
         $this->assertTrue(in_array($group->_id, $user->groups->pluck('_id')->toArray()));

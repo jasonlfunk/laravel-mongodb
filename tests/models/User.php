@@ -45,7 +45,7 @@ class User extends Eloquent implements AuthenticatableContract, CanResetPassword
 
     public function groups()
     {
-        return $this->belongsToMany('Group', null, 'users', 'groups');
+        return $this->belongsToMany('Group', null, '_users', '_groups');
     }
 
     public function photos()

@@ -9,6 +9,6 @@ class Group extends Eloquent
 
     public function users()
     {
-        return $this->belongsToMany('User', null, 'groups', 'users');
+        return $this->belongsToMany('User', null, '_groups', '_users');
     }
 }
